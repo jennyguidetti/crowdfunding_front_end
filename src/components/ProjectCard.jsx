@@ -3,12 +3,14 @@ import "./ProjectCard.css";
 
 function ProjectCard(props) {
     const { projectData } = props;
+    const projectLink = `project/${projectData.id}`;
+    console.log(projectData);
 
     return (
         <div className="project-card">
-            <Link to="./project">
+            <Link to={projectLink}>
                 <img src={projectData.image} />
-                <h3>{projectData.title}</h3>
+                <h3>{projectData.organisation_name}</h3>
             </Link>
         </div>
     );
