@@ -4,7 +4,6 @@ import "./ProjectCard.css";
 function ProjectCard(props) {
     const { projectData } = props;
     const projectLink = `project/${projectData.id}`;
-    console.log(projectData);
 
     return (
         <div className="project-card">

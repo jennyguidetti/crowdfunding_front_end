@@ -2,10 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import HomePage from "./pages/Homepage";
-import ProjectPage from "./pages/ProjectPage";
+import HomePage from "./pages/Homepage.jsx";
+import ProjectPage from "./pages/ProjectPage.jsx";
+import LoginPage from "./pages/LoginPage.jsx";
 
-import NavBar from "./components/NavBar";
+import NavBar from "./components/NavBar.jsx";
 
 const router = createBrowserRouter([
     {
@@ -13,6 +14,7 @@ const router = createBrowserRouter([
         element: <NavBar />,
         children: [
             { path: "/", element: <HomePage />},
+            { path: "/login", element: <LoginPage />},
             { path: "/project/:id", element: <ProjectPage />},
         ],
     },
