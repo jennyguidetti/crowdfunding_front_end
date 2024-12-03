@@ -59,6 +59,7 @@ function SignUpForm() {
                     type="text" 
                     id="username" 
                     placeholder="Enter username"
+                    value={credentials.username}
                     onChange={handleChange} 
                 />
             </div>
@@ -68,6 +69,7 @@ function SignUpForm() {
                     type="text" 
                     id="first_name" 
                     placeholder="Enter first name"
+                    value={credentials.first_name}
                     onChange={handleChange} 
                 />
             </div>
@@ -77,6 +79,7 @@ function SignUpForm() {
                     type="text" 
                     id="last_name" 
                     placeholder="Enter last name"
+                    value={credentials.last_name}
                     onChange={handleChange} 
                 />
             </div>
@@ -86,6 +89,7 @@ function SignUpForm() {
                     type="text" 
                     id="email" 
                     placeholder="Enter email"
+                    value={credentials.email}
                     onChange={handleChange} 
                 />
             </div>
@@ -94,7 +98,8 @@ function SignUpForm() {
                 <input 
                     type="password" 
                     id="password" 
-                    placeholder="Password" 
+                    placeholder="Password"
+                    value={credentials.password} 
                     onChange={handleChange}
                 />
             </div>
@@ -104,6 +109,7 @@ function SignUpForm() {
                     type="text" 
                     id="employer" 
                     placeholder="Employer" 
+                    value={credentials.employer}
                     onChange={handleChange}
                 />
             </div>
@@ -113,6 +119,7 @@ function SignUpForm() {
                     type="text" 
                     id="clinical_level" 
                     placeholder="Clinical Level" 
+                    value={credentials.clinical_level}
                     onChange={handleChange}
                 />
             </div>

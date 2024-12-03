@@ -45,6 +45,7 @@ function LoginForm() {
                     type="text" 
                     id="username" 
                     placeholder="Enter username"
+                    value={credentials.username}
                     onChange={handleChange} 
                 />
             </div>
@@ -53,7 +54,8 @@ function LoginForm() {
                 <input 
                     type="password" 
                     id="password" 
-                    placeholder="Password" 
+                    placeholder="Password"
+                    value={credentials.password} 
                     onChange={handleChange}
                 />
             </div>
