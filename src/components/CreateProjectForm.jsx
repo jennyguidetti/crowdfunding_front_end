@@ -27,8 +27,18 @@ function CreateProjectForm() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+
+        // automatically set the date
+        const currentDate = new Date().toISOString();
+
+        // update the project data with the current date
+        const updateProjectData = {
+            ...projectData,
+            date_created: currentDate,
+        };
+
         try {
-            const response = await postProjects(projectData, auth.token);
+            const response = await postProjects(updateProjectData, auth.token);
             navigate(`/project/${response.id}`);
         } catch (error) {
             console.error("Failed to create a project:". error.message);
@@ -84,16 +94,6 @@ function CreateProjectForm() {
                     id="is_open" 
                     defaultChecked={true} 
                     value={projectData.is_open}
-                    onChange={handleChange}
-                />
-            </div>
-            <div>
-                <label htmlFor="date_created">Date Created:</label>
-                <input 
-                    type="date" 
-                    id="date_created" 
-                    placeholder="Add date project was created"
-                    value={projectData.date_created}
                     onChange={handleChange}
                 />
             </div>
