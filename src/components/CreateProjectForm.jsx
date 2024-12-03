@@ -87,16 +87,6 @@ function CreateProjectForm() {
                     onChange={handleChange}
                 />
             </div>
-            <div>
-                <label htmlFor="is_open">Project Open:</label>
-                <input 
-                    type="checkbox" 
-                    id="is_open" 
-                    defaultChecked={true} 
-                    value={projectData.is_open}
-                    onChange={handleChange}
-                />
-            </div>
             <button type="submit" onClick={handleSubmit}>
                 Create Project
             </button>
