@@ -33,11 +33,8 @@ function ProjectPage() {
                     );
                 })}
             </ul>
-            < CreatePledgeForm projectId={id} />
             <img src={project.image} />
-            {/* <Link to={"/pledges"} >
-                <button type="button">Pledge to Organsation</button>
-            </Link> */}
+            < CreatePledgeForm projectId={id} />
         </div>
     );
 }
