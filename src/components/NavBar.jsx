@@ -17,14 +17,14 @@ function NavBar() {
                 <Link to="/">Home</Link>
                 <Link to="/signup">Sign Up</Link>
                 <Link to="/projects">Create Project</Link>
-                <Link to="/pledges">Create Pledge</Link>
                 {auth.token ? (
                     <Link to="/" onClick={handleLogout}>
                         Log Out
                     </Link>
                     ) : (
                     <Link to="/login">Login</Link>
-                )}
+                )} 
+                {/* do this auth.token bit but change so logged out users cannot see pledge or project form */}
             </nav>
             <Outlet />
         </div>

@@ -1,5 +1,6 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import useProject from "../hooks/use-project";
+import CreatePledgeForm from "../components/CreatePledgeForm";
 
 function ProjectPage() {
     // Here we use a hook that comes for free in react router called `useParams` to get the id from the URL so that we can pass it to our useProject hook.
@@ -32,7 +33,11 @@ function ProjectPage() {
                     );
                 })}
             </ul>
+            < CreatePledgeForm projectId={id} />
             <img src={project.image} />
+            {/* <Link to={"/pledges"} >
+                <button type="button">Pledge to Organsation</button>
+            </Link> */}
         </div>
     );
 }

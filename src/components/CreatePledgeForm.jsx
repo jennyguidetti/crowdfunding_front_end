@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 import { useAuth } from "../hooks/use-auth.js"
 import postPledge from "../api/post-pledge.js";
 
-function CreatePledgeForm() {
+function CreatePledgeForm(props) {
+    const { projectId } = props;
     const navigate = useNavigate();
     const { auth } = useAuth();
 
@@ -12,7 +13,7 @@ function CreatePledgeForm() {
         hours:"",
         comment:"",
         anonymous: false,
-        project: "",
+        project: projectId,
     });
 
     const handleChange = (event) => {
@@ -27,10 +28,10 @@ function CreatePledgeForm() {
         event.preventDefault();
 
         try {
-            const response = await postProjects(pledgeData, auth.token);
-            navigate(`/pledges`);
+            const response = await postPledge(pledgeData, auth.token);
+            navigate(0); // to reload the same page, is the same as navigate("/")
         } catch (error) {
-            console.error("Failed to create a pledge:". error.message);
+            console.error("Failed to create a pledge:", error.message);
         }
     };
 
@@ -44,6 +45,8 @@ function CreatePledgeForm() {
                     placeholder="Enter hours"
                     value={pledgeData.hours}
                     onChange={handleChange} 
+                    min="10"
+                    step="10"
                 />
             </div>
             <div>

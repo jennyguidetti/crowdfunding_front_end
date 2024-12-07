@@ -1,18 +1,12 @@
-async function postPledge(pledgeData) {
+async function postPledge(pledgeData, token) {
     const url = `${import.meta.env.VITE_API_URL}/pledges/`;
-    const token = window.localStorage.getItem("token");
     const response = await fetch(url, {
         method: "POST", // We need to tell the server that we are sending JSON data so we set the Content-Type header to application/json
         headers: {
             "Content-Type": "application/json",
             "Authorization": `Token ${token}`
         },
-        body: JSON.stringify({
-        "hours": pledgeData.hours,
-        "comment": pledgeData.comment,
-        "anonymous": pledgeData.anonymous,
-        "project": pledgeData.project,
-        }),
+        body: JSON.stringify(pledgeData),
     });
 
     if (!response.ok) {
