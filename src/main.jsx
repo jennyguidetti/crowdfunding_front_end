@@ -2,15 +2,17 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
+import NavBar from "./components/NavBar.jsx";
 import HomePage from "./pages/Homepage.jsx";
 import ProjectPage from "./pages/ProjectPage.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
 import SignUpPage from "./pages/SignUpPage.jsx";
 import CreateProjectPage from "./pages/CreateProjectPage.jsx";
-
-import NavBar from "./components/NavBar.jsx";
-import { AuthProvider } from "./components/AuthProvider.jsx";
 import CreatePledgePage from "./pages/CreatePledgePage.jsx";
+
+import "./main.css";
+
+import { AuthProvider } from "./components/AuthProvider.jsx";
 
 const router = createBrowserRouter([
     {

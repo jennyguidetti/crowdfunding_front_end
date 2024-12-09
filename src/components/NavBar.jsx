@@ -1,5 +1,7 @@
 import { Link, Outlet } from "react-router-dom";
 import { useAuth } from "../hooks/use-auth.js";
+import "./NavBar.css";
+import Header from "../pages/Header.jsx"; 
 
 function NavBar() {
     const {auth, setAuth} = useAuth();
@@ -12,8 +14,9 @@ function NavBar() {
     console.log(auth)
 
     return (
-        <div>
-            <nav>
+        <div className="navbar-container">
+            <Header />
+            <nav className="navbar">
                 <Link to="/">Home</Link>
                 {auth.token ? (
                     <>
@@ -28,7 +31,6 @@ function NavBar() {
                         <Link to="/login">Login</Link>
                     </>
                 )} 
-                {/* do this auth.token bit but change so logged out users cannot see pledge or project form */}
             </nav>
             <Outlet />
         </div>

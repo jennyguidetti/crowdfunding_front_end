@@ -1,3 +1,29 @@
 img {
     max-width: 100%;
 }
+
+.project-container {
+    padding: 20px;
+}
+
+.project-title {
+    font-size: 2rem;
+    color: #333;
+}
+
+.project-description {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.pledge-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.pledge-item {
+    background: #f4f4f4;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
