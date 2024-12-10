@@ -1,7 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
 import { useAuth } from "../../hooks/use-auth.js";
 import "./NavBar.css";
-import Header from "../../pages/Header.jsx"; 
 
 function NavBar() {
     const {auth, setAuth} = useAuth();
@@ -15,7 +14,6 @@ function NavBar() {
 
     return (
         <div className="navbar-container">
-            <Header />
             <nav className="navbar">
                 <Link to="/">Home</Link>
                 {auth.token ? (

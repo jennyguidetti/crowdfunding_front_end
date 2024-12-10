@@ -7,13 +7,6 @@ async function deleteProject(projectData, projectId) {
             "Content-Type": "application/json",
             "Authorization": `Token ${token}`
         },
-        // body: JSON.stringify({
-        // "organisation_name": projectData.organisation_name,
-        // "organisation_description": projectData.organisation_description,
-        // "goal": projectData.goal,
-        // "image": projectData.image,
-        // "is_open": projectData.is_open,
-        // }),
     });
 
     if (!response.ok) {
