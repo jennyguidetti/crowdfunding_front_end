@@ -2,15 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
-import NavBar from "./components/NavBar.jsx";
-import HomePage from "./pages/Homepage.jsx";
-import ProjectPage from "./pages/ProjectPage.jsx";
+import NavBar from "./components/NavBar/NavBar.jsx";
+import HomePage from "./pages/HomePage/HomePage.jsx";
+import ProjectPage from "./pages/ProjectPage/ProjectPage.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
 import SignUpPage from "./pages/SignUpPage.jsx";
 import CreateProjectPage from "./pages/CreateProjectPage.jsx";
 import CreatePledgePage from "./pages/CreatePledgePage.jsx";
 
-import "./main.css";
+import "./index.css";
 
 import { AuthProvider } from "./components/AuthProvider.jsx";
 
@@ -23,7 +23,7 @@ const router = createBrowserRouter([
             { path: "/signup", element: <SignUpPage />},
             { path: "/login", element: <LoginPage />},
             { path: "/projects", element: <CreateProjectPage />},
-            { path: "/project/:id", element: <ProjectPage />},
+            { path: "/projects/:id", element: <ProjectPage />},
             { path: "/pledges", element: <CreatePledgePage />},
         ],
     },
