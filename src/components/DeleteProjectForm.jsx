@@ -30,7 +30,7 @@ function DeleteProjectForm(props) {
 
         try {
             await deleteProject(projectData, project.id);
-            navigate(`/projects`);
+            navigate(`/`);
         } catch (error) {
             console.error("Failed to delete the project:", error?.message);
         }

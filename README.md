@@ -10,8 +10,7 @@ A crowdfunding app where paramedics can do work experience with other ambulance 
 - Users can login
 - Users can make pledge to ambulance service
 - Users can edit pledges to ambulance service
-- Users can register as admin for Ambulance Service
-- Admin can make project for pledges
+- Users can make ambulance service project
 
 ### Nice to have
 - Admin users are verified
