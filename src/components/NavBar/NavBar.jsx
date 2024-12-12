@@ -14,8 +14,15 @@ function NavBar() {
 
     return (
         <div className="navbar-container">
+            <div className="logo">
+                <Link to="/">
+                    <img src="./img/logo.png" alt="Logo" />
+                </Link>
+            </div>
             <nav className="navbar">
                 <Link to="/">Home</Link>
+                <Link to="/projectsall">Projects</Link>
+                <Link to="user">Account</Link>
                 {auth.token ? (
                     <>
                         <Link to="/projects">Create Project</Link>
