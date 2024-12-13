@@ -39,10 +39,10 @@ export default HomePage;
 //         <div id="project-list">
 //             <h2>What is ParamediXPlus?</h2>
 //             <h3>Designed for ambulance services globally to give paramedics around the world a chance to experience what working for other services is like</h3>
-//             const projectSummary = {projects.map((projectData, key) => {
+//             {projects.map((projectData, key) => {
 //                 return <ProjectCard key={key} projectData={projectData} />;
 //             })}
-//             projectSummary.slice(1,3);
+//             
 //         </div>
 //     );
 // }
