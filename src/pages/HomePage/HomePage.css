@@ -1,6 +1,34 @@
-#project-list {
+/* #project-list {
     display: grid;
     grid-template-columns: 30% 30% 30%;
     column-gap: 10px;
     row-gap: 10px;
+} */
+
+#about-section {
+    text-align: center; /* Centers the text */
+    margin-bottom: 20px; /* Adds space below the intro section */
+    padding: 20px 0; /* Adds vertical padding */
+    background-color: #f4f4f4; /* Optional: Adds a light background for contrast */
+}
+
+#about-section h2 {
+    font-size: 2rem; /* Adjust font size for the heading */
+    margin-bottom: 10px; /* Adds spacing between h2 and h3 */
+}
+
+#about-section h3 {
+    font-size: 1.2rem; /* Adjust font size for the subheading */
+    color: #555; /* Optional: Subtle text color */
+    margin-bottom: 20px; /* Add space below */
+    line-height: 1.6; /* Adjust line spacing */
+}
+
+#project-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 20px; /* Spacing between cards */
+    margin: 0 auto; /* Centers the grid */
+    max-width: 90%; /* Restricts grid width */
+    padding: 20px 0; /* Adds vertical padding */
 }

@@ -21,7 +21,7 @@ function NavBar() {
             </div>
             <nav className="navbar">
                 <Link to="/">Home</Link>
-                <Link to="/projectsall">Projects</Link>
+                <Link to="/projectsall">Services</Link>
                 <Link to="user">Account</Link>
                 {auth.token ? (
                     <>
