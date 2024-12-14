@@ -4,10 +4,12 @@ import CreatePledgeForm from "../../components/CreatePledgeForm";
 import "./ProjectPage.css";
 import UpdateProjectForm from "../../components/UpdateProjectForm";
 import DeleteProjectForm from "../../components/DeleteProjectForm";
+import { useAuth } from "../../hooks/use-auth";
 
 function ProjectPage() {
     // Here we use a hook that comes for free in react router called `useParams` to get the id from the URL so that we can pass it to our useProject hook.
     const { id } = useParams();
+    const { auth } = useAuth();
     // useProject returns three pieces of info, so we need to grab them all here
     const { project, isLoading, error } = useProject(id);
 
@@ -18,6 +20,8 @@ function ProjectPage() {
     if (error) {
         return (<p>error.message</p>)
     }
+
+    const isOwner = auth.userId === project.owner;
 
     return (
         <div className="project-container">
@@ -37,6 +41,7 @@ function ProjectPage() {
                 })}
             </ul>
             <img src={project.image} alt={project.organisation_name} />
+
             < CreatePledgeForm projectId={id} />
             < UpdateProjectForm project={project} />
             < DeleteProjectForm project={project} />
@@ -45,3 +50,15 @@ function ProjectPage() {
 }
 
 export default ProjectPage;
+
+// {showUpdateForm ?
+//     <UpdateProjectForm project={project} />
+//     :null
+// }
+
+// {auth.token && isOwner ? (
+//     <button>
+//         Something
+//     </button>
+// ) : null}
+// )}
