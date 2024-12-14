@@ -5,6 +5,12 @@
     row-gap: 10px;
 } */
 
+#project-list h2, 
+#project-list h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 #about-section {
     text-align: center; /* Centers the text */
     margin-bottom: 20px; /* Adds space below the intro section */
@@ -31,4 +37,14 @@
     margin: 0 auto; /* Centers the grid */
     max-width: 90%; /* Restricts grid width */
     padding: 20px 0; /* Adds vertical padding */
+}
+
+.extra-info {
+    text-align: center;
+    width: 100%; /* Ensures it's centered relative to the whole page */
+    margin-top: 30px;
+}
+
+.extra-info h3 {
+    color: #333; /* Adjust as necessary for contrast */
 }

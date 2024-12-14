@@ -15,7 +15,6 @@ function HomePage() {
                 <h3>
                     Designed for ambulance services globally to give paramedics around the world a chance to experience what working for other services is like.<br />
                     Have a look at what services are currently advertising openings below:<br /><br />
-                    If you are from an ambulance service wishing to advertise an opportunity, click here (insert link)
                 </h3>
 
             </div>
@@ -24,6 +23,10 @@ function HomePage() {
                 {visibleProjects.map((projectData, key) => {
                     return <ProjectCard key={key} projectData={projectData} />;
                 })}
+            </div>
+
+            <div className="extra-section">
+                <h3>If you are from an ambulance service wishing to advertise an opportunity, click here (insert link)</h3>
             </div>
         </div>
     );
