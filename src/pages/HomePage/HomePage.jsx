@@ -1,5 +1,6 @@
 import useProjects from "../../hooks/use-projects";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
+import { Link } from "react-router-dom";
 import "./HomePage.css";
 
 function HomePage() {
@@ -26,7 +27,20 @@ function HomePage() {
             </div>
 
             <div className="extra-section">
-                <h3>If you are from an ambulance service wishing to advertise an opportunity, click here (insert link)</h3>
+                <h3>If you are from an ambulance service wishing to advertise an opportunity, {" "}
+                <Link to="/createproject" style={{ color: "#007BFF", textDecoration: "underline" }}>
+                        click here
+                    </Link>{" "}
+                </h3>
+            </div>
+            <div style={{ textAlign: "center", marginTop: "20px" }}>
+                <p>
+                    If you are from an ambulance service wishing to advertise an opportunity,{" "}
+                    <Link to="/createproject" style={{ color: "#007BFF", textDecoration: "underline" }}>
+                        click here
+                    </Link>{" "}
+                    to <strong>Create a New Opportunity</strong>.
+                </p>
             </div>
         </div>
     );

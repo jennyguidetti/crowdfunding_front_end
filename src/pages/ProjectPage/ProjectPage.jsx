@@ -21,7 +21,7 @@ function ProjectPage() {
         return (<p>error.message</p>)
     }
 
-    const isOwner = auth.userId === project.owner;
+    const isOwner = parseInt(auth.userId) === parseInt(project.owner);
 
     return (
         <div className="project-container">
@@ -43,8 +43,14 @@ function ProjectPage() {
             <img src={project.image} alt={project.organisation_name} />
 
             < CreatePledgeForm projectId={id} />
-            < UpdateProjectForm project={project} />
-            < DeleteProjectForm project={project} />
+
+            {auth.token && isOwner && (
+                <>
+                < UpdateProjectForm project={project} />
+                < DeleteProjectForm project={project} />
+                </>
+            )}
+            
         </div>
     );
 }
