@@ -19,9 +19,9 @@ A crowdfunding app where paramedics can do work experience with other ambulance 
 2. Ensure 'Body' contains mandatory fields provided in JSON format: username, password
 3. Send request to receive 200 response and authorisation token
 
-![homepage](./src/img/homepage.png)
+![homepage](./public/src/img/homepage.png)
 
-![project page](./src/img/projectpage.png)
+![project page](./public/src/img/projectpage.png)
 
-![create project](./src/img/createproject.png)
+![create project](./public/src/img/createproject.png)
 
