@@ -14,14 +14,9 @@ A crowdfunding app where paramedics can do work experience with other ambulance 
 - Users can make ambulance service project
 - Users can view their own account details
 
-### How to create a new project
-1. Make POST request at /api-token-auth/ endpoint
-2. Ensure 'Body' contains mandatory fields provided in JSON format: username, password
-3. Send request to receive 200 response and authorisation token
+![homepage](./public/img/homepage.png)
 
-![homepage](./public/src/img/homepage.png)
+![project page](./public/img/projectpage.png)
 
-![project page](./public/src/img/projectpage.png)
-
-![create project](./public/src/img/createproject.png)
+![create project](./public/img/createproject.png)
 
