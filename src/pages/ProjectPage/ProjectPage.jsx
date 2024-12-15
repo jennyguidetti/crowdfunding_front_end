@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import useProject from "../../hooks/use-project";
-import CreatePledgeForm from "../../components/CreatePledgeForm";
+import CreatePledgeForm from "../../components/CreatePledgeForm/CreatePledgeForm";
 import "./ProjectPage.css";
 import UpdateProjectForm from "../../components/UpdateProjectForm";
 import DeleteProjectForm from "../../components/DeleteProjectForm";
@@ -24,33 +24,51 @@ function ProjectPage() {
     const isOwner = parseInt(auth.userId) === parseInt(project.owner);
 
     return (
-        <div className="project-container">
-            <h2 className="project-title">{project.organisation_name}</h2>
-            <h3 className="project-description">{project.organisation_description}</h3>
-            <h3>Goal: {project.goal}</h3>
-            <h3>Created at: {project.date_created}</h3>
-            <h3>{`Open Status: ${project.is_open}`}</h3>
-            <h3>Pledges:</h3>
-            <ul>
-                {project.pledges.map((pledgeData, key) => {
-                    return (
-                        <li key={key}>
-                            {pledgeData.hours} from {pledgeData.supporter}
-                        </li>
-                    );
-                })}
-            </ul>
-            <img src={project.image} alt={project.organisation_name} />
+        <div>
+            <div className="project-header-section">
+                <h2>{project.organisation_name}</h2>
+            </div>
 
-            < CreatePledgeForm projectId={id} />
+            <div className="project-container">
+                <div className="project-content">
+                    <div className="project-info">
+                        <h3 className="project-description">{project.organisation_description}</h3>
+                        <div className="project-details">
+                            <p><strong>Goal:</strong> {project.goal}</p>
+                            <p><strong>Created:</strong> {project.date_created}</p>
+                            <p><strong>Status:</strong> {project.is_open ? 'Open' : 'Closed'}</p>
+                        </div>
+                    </div>
+                    
+                    <div className="project-image">
+                        <img src={project.image} alt={project.organisation_name} />
+                    </div>
+                </div>
 
-            {auth.token && isOwner && (
-                <>
-                < UpdateProjectForm project={project} />
-                < DeleteProjectForm project={project} />
-                </>
-            )}
-            
+                <div className="pledges-section">
+                    <h3>Current Pledges</h3>
+                    <ul className="pledge-list">
+                        {project.pledges.map((pledgeData, key) => {
+                            return (
+                                <li key={key} className="pledge-item">
+                                    {pledgeData.hours} hours from {pledgeData.supporter}
+                                </li>
+                            );
+                        })}
+                    </ul>
+                </div>
+
+                <div className="pledge-form-section">
+                    <CreatePledgeForm projectId={id} />
+                </div>
+
+                {auth.token && isOwner && (
+                    <div className="owner-actions">
+                        <UpdateProjectForm project={project} />
+                        <DeleteProjectForm project={project} />
+                    </div>
+                )}
+            </div>
         </div>
     );
 }

@@ -21,6 +21,10 @@
 #about-section h2 {
     font-size: 1.8rem; /* Adjust font size for the heading */
     margin-bottom: 10px; /* Adds spacing between h2 and h3 */
+    border-bottom: 4px solid #f00;
+    border-left: 4px solid #f00;
+    margin: 8px;
+    text-transform: uppercase;
 }
 
 #about-section h3 {
