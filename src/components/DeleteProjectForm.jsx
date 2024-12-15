@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import { useAuth } from "../hooks/use-auth.js"
 import deleteProject from "../api/delete-project.js";
+import Button from "./Button/Button.jsx";
 
 function DeleteProjectForm(props) {
     const navigate = useNavigate();
@@ -37,11 +38,9 @@ function DeleteProjectForm(props) {
     };
 
     return (
-        <form>
-            <button type="submit" onClick={handleSubmit}>
-                Delete Project
-            </button>
-        </form>
+        <Button onClick={handleSubmit}>
+            Delete
+        </Button>
     );
 }
 

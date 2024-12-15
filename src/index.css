@@ -6,11 +6,11 @@
 }
 
 :root {
-    --red: #bc0000;
-    --blue: #0012de;
-    --white: #ffffff;
-    --grey: #787878;
-    --black: #000000;
+    --mainred: #bc0000;
+    --mainblue: #0012de;
+    --mainwhite: #ffffff;
+    --maingrey: #787878;
+    --mainblack: #000000;
 }
 
 .header {
@@ -40,6 +40,10 @@
     margin-bottom: 20px;
     padding: 20px 0 20px 0;
     background-color: #F4F4F4;
+    width: 100vw;          
+    margin-left: calc(-50vw + 50%);  
+    margin-right: calc(-50vw + 50%); 
+    position: relative; 
 }
 
 .form-header-section h2 {
@@ -89,9 +93,18 @@
 .form-actions {
     margin-top: 20px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 .form-actions .custom-button {
     padding: 8px 20px;
     font-size: 14px;
+}
+
+.update-project-form,
+.delete-project-form {
+    background-color: #FFFFFF;
+    padding: 20px;
 }

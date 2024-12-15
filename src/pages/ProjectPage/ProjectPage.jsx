@@ -58,14 +58,19 @@ function ProjectPage() {
                     </ul>
                 </div>
 
-                <div className="pledge-form-section">
-                    <CreatePledgeForm projectId={id} />
-                </div>
+                {auth.token ? (
+                    <div className="pledge-form-section">
+                        <CreatePledgeForm projectId={id} />
+                    </div>
+                ) : (
+            <div className="login-prompt" style={{ textAlign: 'center', margin: '20px 0' }}>
+                        <p>Please <Link to="/login" style={{ color: '#007BFF' }}>login</Link> to make a pledge</p>
+                    </div>
+                )}
 
                 {auth.token && isOwner && (
                     <div className="owner-actions">
                         <UpdateProjectForm project={project} />
-                        <DeleteProjectForm project={project} />
                     </div>
                 )}
             </div>
@@ -74,15 +79,3 @@ function ProjectPage() {
 }
 
 export default ProjectPage;
-
-// {showUpdateForm ?
-//     <UpdateProjectForm project={project} />
-//     :null
-// }
-
-// {auth.token && isOwner ? (
-//     <button>
-//         Something
-//     </button>
-// ) : null}
-// )}
