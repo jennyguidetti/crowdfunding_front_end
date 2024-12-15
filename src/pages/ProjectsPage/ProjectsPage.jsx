@@ -8,6 +8,7 @@ function ProjectsPage() {
 
     return (
         <div>
+            <h2 className="projects-header">Explore current projects</h2>
         {/* // <div>
         //     <Link to="/projects">Create Project</Link>
         // </div>
