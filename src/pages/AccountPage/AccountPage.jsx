@@ -21,15 +21,19 @@ function AccountPage() {
     }
 
     return (
-        <div id="account-details">
-            <h2>Account Details</h2>
-            <p><strong>Name:</strong> {user.name}</p>
-            <p><strong>Email:</strong> {user.email}</p>
-            <p><strong>Username:</strong> {user.username}</p>
+        <div>
+            <div className="account-header-section">
+                <h2>Account Details</h2>
+            </div>
+            <div id="account-details">
+                <p><strong>Name:</strong> {user.name}</p>
+                <p><strong>Email:</strong> {user.email}</p>
+                <p><strong>Username:</strong> {user.username}</p>
 
-            <div className="account-actions">
-                <button>Update Account</button>
-                <button>Delete Account</button>
+                <div className="account-actions">
+                    <button>Update Account</button>
+                    <button>Delete Account</button>
+                </div>
             </div>
         </div>
     );

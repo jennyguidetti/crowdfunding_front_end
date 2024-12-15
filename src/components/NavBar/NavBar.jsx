@@ -10,34 +10,36 @@ function NavBar() {
         setAuth({ token: null });
     };
 
-    console.log(auth)
-
     return (
-        <div className="navbar-container">
-            <div className="logo">
-                <Link to="/">
-                    <img src="./img/logo.png" alt="Logo" />
-                </Link>
+        <>
+            <div className="navbar-container">
+                <div className="logo">
+                    <Link to="/">
+                        <img src="./img/logo.png" alt="Logo" />
+                    </Link>
+                </div>
+                <nav className="navbar">
+                    <Link to="/">Home</Link>
+                    <Link to="/projectsall">Services</Link>
+                    <Link to="user">Account</Link>
+                    {auth.token ? (
+                        <>
+                            <Link to="/" onClick={handleLogout}>
+                                Log Out
+                            </Link>
+                        </>
+                    ) : (
+                        <>
+                            <Link to="/signup">Sign Up</Link>
+                            <Link to="/login">Login</Link>
+                        </>
+                    )} 
+                </nav>
             </div>
-            <nav className="navbar">
-                <Link to="/">Home</Link>
-                <Link to="/projectsall">Services</Link>
-                <Link to="user">Account</Link>
-                {auth.token ? (
-                    <>
-                        <Link to="/" onClick={handleLogout}>
-                            Log Out
-                        </Link>
-                    </>
-                ) : (
-                    <>
-                        <Link to="/signup">Sign Up</Link>
-                        <Link to="/login">Login</Link>
-                    </>
-                )} 
-            </nav>
-            <Outlet />
-        </div>
+            <div className="content">
+                <Outlet />
+            </div>
+        </>
     );
 }
 

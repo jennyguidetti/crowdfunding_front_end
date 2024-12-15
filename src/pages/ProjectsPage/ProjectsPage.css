@@ -1,5 +1,12 @@
+.projects-header-section {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px 0 20px 0;
+    background-color: #f4f4f4;
+}
+
 .projects-header {
     text-align: center;
-    margin: 20px 0;
+    margin: 0;
     color: #333;
 }
