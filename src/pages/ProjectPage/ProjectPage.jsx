@@ -51,7 +51,7 @@ function ProjectPage() {
                         {project.pledges.map((pledgeData, key) => {
                             return (
                                 <li key={key} className="pledge-item">
-                                    {pledgeData.hours} hours from {pledgeData.supporter}
+                                    {pledgeData.hours} hours
                                 </li>
                             );
                         })}
