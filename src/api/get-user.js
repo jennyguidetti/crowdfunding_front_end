@@ -3,7 +3,7 @@ async function getUser(userId, token) {
     const response = await fetch(url, { 
         method: "GET",
         headers: {
-            "Authorization": `Bearer ${token}`,
+            "Authorization": `Token ${token}`,
             "Content-Type": "application/json"
         },
     });
@@ -12,6 +12,7 @@ async function getUser(userId, token) {
         const fallbackError = `Error fetching user with id: ${userId}`;
 
         console.log(userId);
+        console.log(token);
 
         const data = await response.json().catch(() => {
             throw new Error(fallbackError);

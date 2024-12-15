@@ -1,4 +1,5 @@
 import "./AccountPage.css";
+import Button from "../../components/Button/Button.jsx";
 
 import useCurrentUser from "../../hooks/use-users.js";
 import { useAuth } from "../../hooks/use-auth.js";
@@ -16,7 +17,7 @@ function AccountPage() {
         return <p>Error: {error.message}</p>;
     }
 
-    if (!currentUser) {
+    if (!user) {
         return <p>User not found.</p>;
     }
 
@@ -26,13 +27,15 @@ function AccountPage() {
                 <h2>Account Details</h2>
             </div>
             <div id="account-details">
-                <p><strong>Name:</strong> {user.name}</p>
-                <p><strong>Email:</strong> {user.email}</p>
                 <p><strong>Username:</strong> {user.username}</p>
+                <p><strong>Name:</strong> {user.first_name} {user.last_name}</p>
+                <p><strong>Email:</strong> {user.email}</p>
+                <p><strong>Employer:</strong> {user.employer}</p>
+                <p><strong>Clinical Level:</strong> {user.clinical_level}</p>
 
                 <div className="account-actions">
-                    <button>Update Account</button>
-                    <button>Delete Account</button>
+                    <Button>Update Account</Button>
+                    <Button>Delete Account</Button>
                 </div>
             </div>
         </div>
