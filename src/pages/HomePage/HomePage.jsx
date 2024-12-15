@@ -2,6 +2,7 @@ import useProjects from "../../hooks/use-projects";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import { Link } from "react-router-dom";
 import "./HomePage.css";
+import Button from "../../components/Button/Button";
 
 function HomePage() {
     const { projects } = useProjects();
@@ -14,8 +15,7 @@ function HomePage() {
             <div id="about-section">
                 <h2>What is ParamediXPlus?</h2>
                 <h3>
-                    Designed for ambulance services globally to give paramedics around the world a chance to experience what working for other services is like.<br />
-                    Have a look at what services are currently advertising openings below:<br /><br />
+                    Designed for ambulance services globally to give paramedics around the world a chance to experience what working for other services is like
                 </h3>
 
             </div>
@@ -24,6 +24,12 @@ function HomePage() {
                 {visibleProjects.map((projectData, key) => {
                     return <ProjectCard key={key} projectData={projectData} />;
                 })}
+            </div>
+
+            <div className="see-all-section">
+                <Link to="/projectsall">
+                    <Button>See All Opportunities</Button>
+                </Link>
             </div>
 
             <div className="extra-section">

@@ -14,7 +14,7 @@
 #about-section {
     text-align: center; /* Centers the text */
     margin-bottom: 20px; /* Adds space below the intro section */
-    padding: 20px 0 2px 0; /* Adds vertical padding */
+    padding: 20px 0 10px 0; /* Adds vertical padding */
     background-color: #f4f4f4; /* Optional: Adds a light background for contrast */
 }
 
@@ -37,6 +37,16 @@
     margin: 0 auto; /* Centers the grid */
     max-width: 90%; /* Restricts grid width */
     padding: 20px 0; /* Adds vertical padding */
+}
+
+.see-all-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.see-all-section .custom-button {
+    padding: 8px 20px;  /* Increased padding */
+    font-size: 14px;    /* Increased font size */
 }
 
 .extra-section {
