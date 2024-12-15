@@ -21,9 +21,9 @@ function NavBar() {
                 <nav className="navbar">
                     <Link to="/">Home</Link>
                     <Link to="/projectsall">Services</Link>
-                    <Link to="user">Account</Link>
                     {auth.token ? (
                         <>
+                        <Link to="user">Account</Link>
                             <Link to="/" onClick={handleLogout}>
                                 Log Out
                             </Link>

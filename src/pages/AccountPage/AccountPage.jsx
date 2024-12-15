@@ -43,6 +43,3 @@ function AccountPage() {
 }
 
 export default AccountPage;
-
-
-// const currentUser = user?.find((user) => user.id === auth.userId);

@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import postLogin from "../api/post-login.js";
 import { useAuth } from "../hooks/use-auth.js"
 
+import Button from "./Button/Button.jsx";
+
 function LoginForm() {
     const navigate = useNavigate();
     const {auth, setAuth} = useAuth();
@@ -40,31 +42,36 @@ function LoginForm() {
     };
 
     return (
-        <form>
-            <div>
-                <label htmlFor="username">Username:</label>
-                <input 
-                    type="text" 
-                    id="username" 
-                    placeholder="Enter username"
-                    value={credentials.username}
-                    onChange={handleChange} 
-                />
+            <div className="form-container">
+            <div className="form-header-section">
+                <h2>Login</h2>
             </div>
-            <div>
-                <label htmlFor="password">Password:</label>
-                <input 
-                    type="password" 
-                    id="password" 
-                    placeholder="Password"
-                    value={credentials.password} 
-                    onChange={handleChange}
-                />
-            </div>
-            <button type="submit" onClick={handleSubmit}>
-                Login
-            </button>
-        </form>
+            <form className="login-form">
+                <div className="form-group">
+                    <label htmlFor="username">Username:</label>
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="Enter username"
+                        onChange={handleChange}
+                    />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="password">Password:</label>
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter password"
+                        onChange={handleChange}
+                    />
+                </div>
+                <div className="form-actions">
+                    <Button type="submit" onClick={handleSubmit}>
+                        Login
+                    </Button>
+                </div>
+            </form>
+        </div>
     );
 }
 

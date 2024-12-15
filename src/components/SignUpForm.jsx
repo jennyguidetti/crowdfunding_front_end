@@ -5,6 +5,8 @@ import postLogin from "../api/post-login.js";
 import { useAuth } from "../hooks/use-auth.js"
 import postSignUp from "../api/post-sign-up.js";
 
+import Button from "./Button/Button.jsx";
+
 function SignUpForm() {
     const navigate = useNavigate();
     const {auth, setAuth} = useAuth();
@@ -54,81 +56,63 @@ function SignUpForm() {
     };
 
     return (
-        <form>
-            <div>
+        <div className="form-container">
+        <div className="form-header-section">
+            <h2>Sign Up</h2>
+        </div>
+        <form className="signup-form">
+            <div className="form-group">
                 <label htmlFor="username">Username:</label>
-                <input 
-                    type="text" 
-                    id="username" 
+                <input
+                    type="text"
+                    id="username"
                     placeholder="Enter username"
-                    value={credentials.username}
-                    onChange={handleChange} 
+                    onChange={handleChange}
                 />
             </div>
-            <div>
-                <label htmlFor="first_name">First name:</label>
-                <input 
-                    type="text" 
-                    id="first_name" 
-                    placeholder="Enter first name"
-                    value={credentials.first_name}
-                    onChange={handleChange} 
-                />
-            </div>
-            <div>
-                <label htmlFor="last_name">Last name:</label>
-                <input 
-                    type="text" 
-                    id="last_name" 
-                    placeholder="Enter last name"
-                    value={credentials.last_name}
-                    onChange={handleChange} 
-                />
-            </div>
-            <div>
+            <div className="form-group">
                 <label htmlFor="email">Email:</label>
-                <input 
-                    type="text" 
-                    id="email" 
+                <input
+                    type="email"
+                    id="email"
                     placeholder="Enter email"
-                    value={credentials.email}
-                    onChange={handleChange} 
-                />
-            </div>
-            <div>
-                <label htmlFor="password">Password:</label>
-                <input 
-                    type="password" 
-                    id="password" 
-                    placeholder="Password"
-                    value={credentials.password} 
                     onChange={handleChange}
                 />
             </div>
-            <div>
-                <label htmlFor="employer">Employer:</label>
-                <input 
-                    type="text" 
-                    id="employer" 
-                    placeholder="Employer" 
-                    value={credentials.employer}
-                    onChange={handleChange}
-                />
-            </div>
-            <div>
-                <label htmlFor="clinical_level">Clinical Level:</label>
-                <input 
-                    type="text" 
-                    id="clinical_level" 
-                    placeholder="Clinical Level" 
-                    value={credentials.clinical_level}
-                    onChange={handleChange}
-                />
-            </div>
-            <button type="submit" onClick={handleSubmit}>
-                Create account
-            </button>
-        </form>
+            <div className="form-group">
+                    <label htmlFor="password">Password:</label>
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter password"
+                        onChange={handleChange}
+                    />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="first_name">First Name:</label>
+                    <input
+                        type="text"
+                        id="first_name"
+                        placeholder="Enter first name"
+                        onChange={handleChange}
+                    />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="last_name">Last Name:</label>
+                    <input
+                        type="text"
+                        id="last_name"
+                        placeholder="Enter last name"
+                        onChange={handleChange}
+                    />
+                </div>
+                <div className="form-actions">
+                    <Button type="submit" onClick={handleSubmit}>
+                        Sign Up
+                    </Button>
+                </div>
+            </form>
+        </div>
     );
 }
 
