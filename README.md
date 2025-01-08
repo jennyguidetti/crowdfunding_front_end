@@ -14,19 +14,25 @@ Empowering paramedics to gain real-world experience with other ambulance service
 User Accounts:
 - Create and manage user profiles.
 - Log in with token-based authentication.
+
 Project Creation:
 - Paramedics or ambulance services can create projects (e.g., "Ride Along with NSW Ambulance").
 - Projects include details like title, description, target hours, and an image.
+
 Pledging System:
 - Users can pledge hours to support a project.
 - Pledges include an optional comment.
+  
 Permissions and Security:
 - Only project owners can update or delete their projects.
 - Suitable permissions control who can delete pledges.
+  
 Responsive Design
 - Optimized for use on desktop and mobile devices.
+  
 Error Handling
 - Error pages provide user-friendly feedback.
+  
 
 ## Tech Stack
 ###Front-End
@@ -46,7 +52,7 @@ Create Project Page
 ![create project](./public/img/createproject.png)
 
 ## Future Enhancements
-Integration of messaging between users and ambulance services.
-Advanced analytics for ambulance services to track pledged hours.
-Support for international ambulance service collaborations.
+- Integration of messaging between users and ambulance services.
+- Advanced analytics for ambulance services to track pledged hours.
+- Support for international ambulance service collaborations.
 
