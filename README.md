@@ -35,7 +35,7 @@ Error Handling
   
 
 ## Tech Stack
-###Front-End
+### Front-End
 - React
 - React Router for navigation
 - Axios for API integration
