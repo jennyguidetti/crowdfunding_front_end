@@ -1,1 +1,14 @@
- 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff; /* Background color for the navbar */
+}
+
+.red-line {
+    width: 100%; /* Full width */
+    height: 4px; /* Height of the line */
+    background-color: #f00; /* Red color */
+    margin-top: 5px; /* Space above the line */
+} 
