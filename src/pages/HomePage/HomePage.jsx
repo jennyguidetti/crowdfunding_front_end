@@ -16,7 +16,7 @@ function HomePage() {
             <div id="about-section">
                 <h2>What is ParamediXPlus?</h2>
                 <h3>
-                    Designed for ambulance services globally to give paramedics around the world a chance to experience what working for other services is like.
+                    Designed for ambulance services globally to give paramedics around the world a chance to experience working for other services.
                 </h3>
             </div>
 
