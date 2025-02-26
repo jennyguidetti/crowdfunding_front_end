@@ -73,7 +73,7 @@ function CreateProjectForm() {
                     />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="goal">Goal:</label>
+                    <label htmlFor="goal">Hours available:</label>
                     <input 
                         type="number" 
                         id="goal" 
@@ -83,7 +83,7 @@ function CreateProjectForm() {
                     />
                 </div>
             <div className="form-group">
-                    <label htmlFor="image">Image URL:</label>
+                    <label htmlFor="image">Logo Image URL:</label>
                     <input 
                         type="url" 
                         id="image" 
