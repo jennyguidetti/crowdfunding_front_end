@@ -35,7 +35,7 @@ function ProjectPage() {
                         <h3 className="project-description">{project.organisation_description}</h3>
                         <div className="project-details">
                             <p><strong>Available hours:</strong> {project.goal} hours </p>
-                            <p><strong>Number of applicants:</strong> {project.total_pledges} people </p>
+                            <p><strong>Applicants:</strong> {project.total_pledges} people </p>
                             <p><strong>Status:</strong> {project.is_open ? 'Open' : 'Closed'}</p>
                         </div>
                     </div>
