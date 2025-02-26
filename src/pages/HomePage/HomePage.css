@@ -7,13 +7,15 @@
 #about-section {
     text-align: center; 
     margin-bottom: 20px; 
-    padding: 20px 0 10px 0;
-    background-color: #f4f4f4; 
+    padding: 20px;
+    background-color: #F4F4F4;
+    border-radius: 8px;
 }
 
 #about-section h2 {
     font-size: 1.8rem; 
-    margin-bottom: 10px; 
+    margin: 0;
+    color: #333;
     border-bottom: 4px solid #f00;
     margin: 8px;
     text-transform: uppercase;
@@ -22,14 +24,15 @@
 #about-section h3 {
     font-size: 1.2rem; 
     color: #555; 
+    margin-top: 10px;
     margin-bottom: 20px; 
     line-height: 1.6; 
 }
 
 #project-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 20px; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     margin: 0 auto; 
     max-width: 90%; 
     padding: 20px 0; 
@@ -37,7 +40,7 @@
 
 .see-all-section {
     text-align: center;
-    margin: 20px 0;
+    margin-top: 20px;
 }
 
 .see-all-section .custom-button {
@@ -47,9 +50,7 @@
 
 .extra-section {
     text-align: center;
-    width: 100%; 
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 20px;
 }
 
 .extra-section h3 {
@@ -60,11 +61,19 @@
     max-width: 300px;
     margin: 20px;
     overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .project-card img {
     width: 100%;
     height: auto;
-    object-fit: contain;
-    border-radius: 8px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.home-container {
+    padding: 20px;
 }
