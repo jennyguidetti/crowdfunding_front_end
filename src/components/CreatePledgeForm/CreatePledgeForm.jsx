@@ -47,7 +47,7 @@ function CreatePledgeForm(props) {
                     <input 
                         type="number" 
                         id="hours" 
-                        placeholder="Enter hours"
+                        placeholder="Enter how many hours you can pledge"
                         value={pledgeData.hours}
                         onChange={handleChange} 
                         min="10"
@@ -58,7 +58,7 @@ function CreatePledgeForm(props) {
                     <label htmlFor="comment">Comment:</label>
                     <textarea 
                         id="comment" 
-                        placeholder="Add a comment" 
+                        placeholder="Tell us why you want to experience our service" 
                         value={pledgeData.comment}
                         onChange={handleChange}
                         rows="3"
