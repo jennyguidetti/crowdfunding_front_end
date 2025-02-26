@@ -34,8 +34,7 @@ function ProjectPage() {
                     <div className="project-info">
                         <h3 className="project-description">{project.organisation_description}</h3>
                         <div className="project-details">
-                            <p><strong>Goal:</strong> {project.goal}</p>
-                            <p><strong>Created:</strong> {project.date_created}</p>
+                            <p><strong>Goal:</strong> {project.goal} hours </p>
                             <p><strong>Status:</strong> {project.is_open ? 'Open' : 'Closed'}</p>
                         </div>
                     </div>
