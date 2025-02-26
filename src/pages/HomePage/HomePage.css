@@ -70,8 +70,8 @@
 }
 
 .project-card {
-    flex: 1 1 30%;
-    margin: 10px;
+    max-width: 300px;
+    margin: 20px;
     overflow: hidden;
     border: 1px solid #ddd;
     border-radius: 8px;
