@@ -39,7 +39,7 @@ function CreatePledgeForm(props) {
     return (
         <div className="form-container">
             <div className="form-header-section">
-                <h2>Make a Pledge</h2>
+                <h2>Apply for a spot</h2>
             </div>
             <form className="create-pledge-form">
                 <div className="form-group">
