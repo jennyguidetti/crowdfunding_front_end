@@ -45,19 +45,6 @@ function ProjectPage() {
                     </div>
                 </div>
 
-                <div className="pledges-section">
-                    <h3>Current applicant hours pledged</h3>
-                    <ul className="pledge-list">
-                        {project.pledges.map((pledgeData, key) => {
-                            return (
-                                <li key={key} className="pledge-item">
-                                    {pledgeData.hours} hours
-                                </li>
-                            );
-                        })}
-                    </ul>
-                </div>
-
                 {auth.token ? (
                     <div className="pledge-form-section">
                         <CreatePledgeForm projectId={id} />
