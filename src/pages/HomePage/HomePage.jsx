@@ -24,11 +24,7 @@ function HomePage() {
             <h2>Featured Projects</h2>
             <div className="project-list">
                 {visibleProjects.map((project) => (
-                    <div className="project-card" key={project.id}>
-                        <img src={project.image} alt={project.organisation_name} />
-                        <h3>{project.organisation_name}</h3>
-                        <p>{project.organisation_description}</p>
-                    </div>
+                    <ProjectCard key={project.id} project={project} />
                 ))}
             </div>
 
