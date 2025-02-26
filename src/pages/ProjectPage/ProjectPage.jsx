@@ -34,8 +34,8 @@ function ProjectPage() {
                     <div className="project-info">
                         <h3 className="project-description">{project.organisation_description}</h3>
                         <div className="project-details">
-                            <p><strong>Goal:</strong> {project.goal} hours </p>
-                            <p><strong>Number of applicants:</strong> {project.total_pledges} people </p>
+                            <p><strong>Available placement hours:</strong> {project.goal} hours </p>
+                            <p><strong>Number of current applicants:</strong> {project.total_pledges} people </p>
                             <p><strong>Status:</strong> {project.is_open ? 'Open' : 'Closed'}</p>
                         </div>
                     </div>
@@ -46,7 +46,7 @@ function ProjectPage() {
                 </div>
 
                 <div className="pledges-section">
-                    <h3>Current Pledges</h3>
+                    <h3>Current applicant hours pledged</h3>
                     <ul className="pledge-list">
                         {project.pledges.map((pledgeData, key) => {
                             return (
