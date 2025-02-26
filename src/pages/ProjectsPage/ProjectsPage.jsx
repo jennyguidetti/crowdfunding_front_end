@@ -9,7 +9,7 @@ function ProjectsPage() {
     return (
         <div>
             <div className="projects-header-section">
-                <h2 className="projects-header">Explore current projects</h2>
+                <h2 className="projects-header">Explore Service Opportunities</h2>
             </div>
         {/* // <div>
         //     <Link to="/projects">Create Project</Link>

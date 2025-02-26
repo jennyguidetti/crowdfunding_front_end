@@ -71,6 +71,24 @@ function SignUpForm() {
                 />
             </div>
             <div className="form-group">
+                    <label htmlFor="first_name">First Name:</label>
+                    <input
+                        type="text"
+                        id="first_name"
+                        placeholder="Enter first name"
+                        onChange={handleChange}
+                    />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="last_name">Last Name:</label>
+                    <input
+                        type="text"
+                        id="last_name"
+                        placeholder="Enter last name"
+                        onChange={handleChange}
+                    />
+                </div>
+            <div className="form-group">
                 <label htmlFor="email">Email:</label>
                 <input
                     type="email"
@@ -89,20 +107,20 @@ function SignUpForm() {
                     />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="first_name">First Name:</label>
+                    <label htmlFor="employer">Employer:</label>
                     <input
                         type="text"
-                        id="first_name"
-                        placeholder="Enter first name"
+                        id="employer"
+                        placeholder="Enter employer name"
                         onChange={handleChange}
                     />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="last_name">Last Name:</label>
+                    <label htmlFor="clinical_level">Clinical Level:</label>
                     <input
                         type="text"
-                        id="last_name"
-                        placeholder="Enter last name"
+                        id="clinical_level"
+                        placeholder="Enter clinical level"
                         onChange={handleChange}
                     />
                 </div>
